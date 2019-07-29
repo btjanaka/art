@@ -1,19 +1,19 @@
 all: png
 clean:
-	rm -rf png
-	mkdir png
-	mkdir png/landscapes
-	mkdir png/logos
+	rm -rf build
+	mkdir build
+	mkdir build/landscapes
+	mkdir build/logos
 
 LANDSCAPE_SVG := $(shell find landscapes -name '*.svg')
-LANDSCAPE_PNG := $(addprefix png/,$(LANDSCAPE_SVG:%.svg=%.png))
+LANDSCAPE_PNG := $(addprefix build/,$(LANDSCAPE_SVG:%.svg=%.png))
 
 LOGO_SVG := $(shell find logos -name '*.svg')
-LOGO_PNG := $(addprefix png/,$(LOGO_SVG:%.svg=%.png))
+LOGO_PNG := $(addprefix build/,$(LOGO_SVG:%.svg=%.png))
 
 png: $(LANDSCAPE_PNG) $(LOGO_PNG)
 
-png/logos/%.png: logos/%.svg
+build/logos/%.png: logos/%.svg
 	convert -density 300 -transparent white $< $@
-png/landscapes/%.png: landscapes/%.svg
+build/landscapes/%.png: landscapes/%.svg
 	convert -density 96 $< $@
