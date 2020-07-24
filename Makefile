@@ -18,8 +18,8 @@ QUOTE_PNG := $(addprefix build/,$(QUOTE_SVG:%.svg=%.png))
 png: $(LANDSCAPE_PNG) $(LOGO_PNG) $(QUOTE_PNG)
 
 build/logos/%.png: logos/%.svg
-	convert -density 300 -transparent white $< $@
+	inkscape -o $@ -d 300 $<
 build/landscapes/%.png: landscapes/%.svg
-	convert -density 96 $< $@
+	inkscape -o $@ -d 96 $<
 build/quotes/%.png: quotes/%.svg
-	inkscape -o $@ $<
+	inkscape -o $@ -d 96 $<
