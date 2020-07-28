@@ -1,11 +1,20 @@
 # Art
 
 Various pieces of graphic design art made for fun. Use the Makefile to convert
-all the art into png's stored in the `build` folder.
+all the art into png's stored in the `build` directory.
 
 Note some SVG's may not render properly on GitHub or browsers because certain
 features of SVG's, such as gradient meshes, are not fully supported yet. To view
-the accurate versions, see the `build` folder.
+the accurate versions, see the `build` directory.
+
+## Manifest
+
+- `landscapes`: 1920x1080 drawings of landscapes
+- `quotes`: Source for the Instagram account
+  [@q.e.quotes](https://www.instagram.com/q.e.quotes/). Mostly, these are
+  1080x1920 drawings with a quote overlaid.
+- `logos`: Experimental logo(s)
+- `build`: PNG output from the SVG files in the rest of the repo
 
 ## License
 
