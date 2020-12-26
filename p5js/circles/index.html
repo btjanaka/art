@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>p5.js Circles</title>
+    <style>
+      html {
+        font-family: Roboto, sans-serif;
+      }
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      h1 {
+        font-weight: normal;
+        text-align: center;
+      }
+      .p5Canvas,
+      button, input[type="range"], label {
+        margin: 10px auto;
+        display: block;
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.min.js"></script>
+    <script src="sketch.js" defer></script>
+  </head>
+  <body>
+    <h1>p5.js Circles</h1>
+    <p>
+      To live-reload this page, run
+      <br />
+      <code>browser-sync start --server --listen localhost -f -w</code>
+    </p>
+    <div id="p5_canvas"></div>
+    <div id="p5_loading" class="loadingclass">Loading...</div>
+    <div>
+      <button id="control-save">Save</button>
+    </div>
+  </body>
+</html>

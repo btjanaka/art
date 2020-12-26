@@ -1,7 +1,8 @@
 # Art
 
-Various pieces of graphic design art made for fun. Use the Makefile to convert
-all the art into png's stored in the `build` directory.
+Various pieces of art made for fun. Use the Makefile to convert all the art into
+png's stored in the `build` directory. You will need to have `inkscape`
+installed.
 
 Note some SVG's may not render properly on GitHub or browsers because certain
 features of SVG's, such as gradient meshes, are not fully supported yet. To view
@@ -14,6 +15,17 @@ the accurate versions, see the `build` directory.
   [@q.e.quotes](https://www.instagram.com/q.e.quotes/). Mostly, these are
   1080x1920 drawings with a quote overlaid.
 - `logos`: Experimental logo(s)
+- `p5js`: Drawings made with [p5.js](https://p5js.org/). In each subdirectory,
+  you will find an `index.html` file that can be opened in your browser. Some of
+  these are based on Daniel Shiffman's
+  [The Nature of Code](https://github.com/nature-of-code/noc-book-2).
+  - These drawings can also be live-reloaded with
+    [browser-sync](https://www.browsersync.io); to do so, run
+    ```bash
+    browser-sync start --server --listen localhost -f -w
+    ```
+  - The `template` directory contains a template for making new drawings.
+    Copy this directory to get started.
 - `build`: PNG output from the SVG files in the rest of the repo
 
 ## License
