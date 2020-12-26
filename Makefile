@@ -1,5 +1,14 @@
-all: png
-clean:
+.PHONY: help clean clean-site clean-png png
+help:
+	@echo "\033[0;1mCommands\033[0m"
+	@grep -E '^[.a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[34;1m%-30s\033[0m %s\n", $$1, $$2}'
+clean: clean-site clean-png
+
+#
+# SVG to PNG
+#
+
+clean-png:
 	rm -rf build
 	mkdir build
 	mkdir build/landscapes
@@ -17,7 +26,7 @@ QUOTE_PNG := $(addprefix build/,$(QUOTE_SVG:%.svg=%.png))
 QUOTE_NON_POST := build/quotes/quote-bkgd-post.png build/quotes/qeq-profile-pic-post.png
 QUOTE_POST_PNG := $(filter-out $(QUOTE_NON_POST), $(addprefix build/,$(QUOTE_SVG:%.svg=%-post.png)))
 
-png: $(LANDSCAPE_PNG) $(LOGO_PNG) $(QUOTE_PNG) $(QUOTE_POST_PNG)
+png: $(LANDSCAPE_PNG) $(LOGO_PNG) $(QUOTE_PNG) $(QUOTE_POST_PNG) ## Convert all SVGs to PNGs
 
 build/logos/%.png: logos/%.svg
 	inkscape -o $@ -d 300 $<
@@ -31,3 +40,15 @@ build/quotes/%.png: quotes/%.svg
 build/quotes/%-post.png: build/quotes/%.png build/quotes/quote-bkgd.png
 	# See https://imagemagick.org/script/composite.php
 	composite -compose atop -geometry +610+190 $^ $@
+
+#
+# Site
+#
+
+clean-site:
+	rm -rf site
+
+site: clean-site ## Build website.
+	mkdir site
+	cp -r p5js site
+	rm -rf site/p5js/template

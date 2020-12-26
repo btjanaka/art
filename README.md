@@ -24,9 +24,14 @@ the accurate versions, see the `build` directory.
     ```bash
     browser-sync start --server --listen localhost -f -w
     ```
-  - The `template` directory contains a template for making new drawings.
-    Copy this directory to get started.
+  - The `template` directory contains a template for making new drawings. Copy
+    this directory to get started.
 - `build`: PNG output from the SVG files in the rest of the repo
+
+## Site
+
+There is a small site associated with this repo and served on Netlify at
+<https://art.btjanaka.net>. To build it, run `make site`.
 
 ## License
 
