@@ -27,6 +27,7 @@ the accurate versions, see the `build` directory.
   - The `template` directory contains a template for making new drawings. Copy
     this directory to get started.
 - `build`: PNG output from the SVG files in the rest of the repo
+- `index.html`: Home page for the website
 
 ## Site
 
