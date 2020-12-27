@@ -39,4 +39,4 @@ const s = function (p) {
   p.draw = function () {};
 };
 
-let p5Canvas = new p5(s, "p5_canvas");
+const p5Canvas = new p5(s, "p5_canvas");
