@@ -15,7 +15,7 @@ const s = function (p) {
 
   p.setup = function () {
     canvas = p.createCanvas(width, height);
-    p.background("#f2f2f2");
+    p.background("#ffffff");
 
     button = document.getElementById("control-save");
     button.onclick = save;
