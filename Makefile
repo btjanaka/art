@@ -53,3 +53,4 @@ site: clean-site ## Build website.
 	cp index.html site
 	cp -r p5js site
 	rm -rf site/p5js/template
+	cp -r webgl site
