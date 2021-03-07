@@ -34,6 +34,12 @@ the accurate versions, see the `build` directory.
 There is a small site associated with this repo and served on Netlify at
 <https://art.btjanaka.net>. To build it, run `make site`.
 
+## Notes
+
+- The Makefile does not seem to generate the images for
+  `landscapes/retrowave.svg` and `landscapes/retrowave-wide.svg` properly, so
+  the PNGs for these landscapes were manually exported from Inkscape.
+
 ## License
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
